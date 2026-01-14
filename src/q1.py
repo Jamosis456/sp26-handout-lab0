@@ -5,6 +5,7 @@ Make sure to implement tests in the tests directory.
 
 
 def is_palindrome(s: str) -> bool:
+    
     """
     Check if the given string is a palindrome.
 
@@ -16,4 +17,5 @@ def is_palindrome(s: str) -> bool:
     Returns:
         bool: True if the string is a palindrome, False otherwise.
     """
-    return True
+    filtered_chars = [char.lower() for char in s if char.isalnum()]
+    return filtered_chars == filtered_chars[::-1]
